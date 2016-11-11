@@ -6,6 +6,10 @@ function viewportSize(){
 	
 	var dims = { width: test.offsetWidth, height: test.offsetHeight };
 	document.documentElement.removeChild( test );
+
+    dims.width = Math.min(dims.width,window.innerWidth);
+    dims.height = Math.min(dims.height,window.innerHeight);
+    console.log(dims.width);
 	
 	return dims;
 }
